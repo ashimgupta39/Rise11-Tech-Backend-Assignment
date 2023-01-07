@@ -28,13 +28,10 @@ app.post('/signup', async(req, res) => {
       res.send("User Registered Sucessfully")
     }
     catch{
-        res.send("User not registered")
+        res.send("User Already registered")
     }
   });
 
-app.get('/',(req,res) =>{
-    res.send("Hello Noder");
-})
 // Login route
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
